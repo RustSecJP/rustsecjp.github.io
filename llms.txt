@@ -6,6 +6,7 @@
 
 - [安全な Rust アプリケーション開発の指針（ANSSI「Secure Rust Guidelines」日本語訳）](https://rustsecjp.github.io/rust-guide-ja/): フランスの政府機関 ANSSI による Rust のセキュアコーディング指針の日本語訳。全 11 章と、61 件の規則・推奨の一覧。
 - [cargo-vet ガイド（Mozilla「cargo-vet」公式ドキュメント日本語訳）](https://rustsecjp.github.io/cargo-vet-ja/): 依存クレートの監査を共有するツール cargo-vet の公式ガイドの日本語訳。全 24 章。
+- [cargo-deny の本（Embark Studios「cargo-deny」公式ドキュメント日本語訳）](https://rustsecjp.github.io/cargo-deny-ja/): 依存クレートの助言・禁止・ライセンス・取得元を確かめるツール cargo-deny の公式ドキュメントの日本語訳。全 20 ページ。
 - [RustSec Advisory Database の文書（README・CONTRIBUTING 日本語訳）](https://rustsecjp.github.io/advisory-db-ja/): 脆弱性データベース RustSec の概要、助言の書式、報告手順の日本語訳。
 - [crates.io の Trusted Publishing（公式ドキュメント日本語訳）](https://rustsecjp.github.io/trusted-publishing-ja/): API トークンを置かずに CI からクレートを公開する仕組みの日本語訳。
 

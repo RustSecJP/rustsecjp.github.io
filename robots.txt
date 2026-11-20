@@ -8,5 +8,6 @@ Sitemap: https://rustsecjp.github.io/sitemap.xml
 Sitemap: https://rustsecjp.github.io/incidents/sitemap.xml
 Sitemap: https://rustsecjp.github.io/rust-guide-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/cargo-vet-ja/sitemap.xml
+Sitemap: https://rustsecjp.github.io/cargo-deny-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/advisory-db-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/trusted-publishing-ja/sitemap.xml
