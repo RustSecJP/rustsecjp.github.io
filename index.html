@@ -1,114 +1,70 @@
 ---
 layout: home
 lang: ja
-title: RustSecJP — Rust のセキュリティ研究と情報共有
-description: RustSecJP は、日本の Rust セキュリティ研究・情報共有コミュニティです。悪意のある crate のキャンペーン記録、Rust セキュリティ文書の日本語訳を公開しています。
+
+title: RustSecJP — 日本の Rust セキュリティ研究・情報共有のコミュニティ
+description: RustSecJP は、日本の Rust セキュリティ研究・情報共有のコミュニティです。悪意のある crate のキャンペーン記録と、Rust セキュリティ文書の日本語訳を公開しています。
 ---
 <section class="hero">
   <div class="in">
     <img class="hero-art" src="/assets/logo-alpha.png" alt="" width="640" height="640">
+    <span class="rule" aria-hidden="true"></span>
     <h1>Rust<span>Sec</span>JP</h1>
-    <p class="tag">Rust のエコシステムを、より安全に。</p>
-    <p class="desc">日本の Rust セキュリティ研究・情報共有コミュニティ。脆弱性の調査と分析、OSS への貢献、セキュリティの知見の共有に取り組んでいます。</p>
-    <p class="un">非公式のコミュニティです。RustSec・Rust Project・Rust Foundation とは提携していません。</p>
+    <p class="sub">日本の Rust セキュリティ研究・情報共有のコミュニティ</p>
+    <p class="desc">Rust のセキュリティに関する最新情報、研究成果、そして知見を、みんなで共有する場所です。</p>
     <div class="cta">
-      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub で見る <span class="arr">→</span></a>
-      <a class="lnk" href="#research">研究を見る <span class="arr">→</span></a>
+      <a class="btn pri" href="#advisories"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l7.5 3v5.6c0 4.4-3 8-7.5 9.4-4.500-1.400-7.500-5-7.500-9.400V6z"/></svg> 最新の脆弱性情報を見る <span class="arr">→</span></a>
+      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub で見る</a>
     </div>
   </div>
 </section>
 
-<section class="latest">
+<section class="board">
   <div class="in">
-    <p class="bar">新着</p>
-    {% assign l = site.data.latest[0] %}
-    <a class="row" href="{{ l.url }}">
-      <span class="pill">{{ l.kind_ja }}</span>
-      <span class="ttl">{{ l.id }}: {{ l.title_ja }}</span>
-      <span class="date">{{ l.published }}</span>
-      <span class="all">読む <span class="arr">→</span></span>
-    </a>
-  </div>
-</section>
-
-<section class="sec" id="advisories">
-  <div class="in">
-    <p class="eyebrow">01 / 記録</p>
-    <h2>事件と脆弱性の記録</h2>
-    <p class="lead">Rust のエコシステムで起きた事件と脆弱性の記録です。crate ごとに出る助言を、事件のまとまり（キャンペーン）単位で束ね、根拠と確信度を付けて公開しています。</p>
-    <div class="tw"><table>
-      <thead><tr><th>番号</th><th>内容</th><th>対象の crate</th><th>対応する助言</th><th>公開日</th><th>状態</th></tr></thead>
-      <tbody>
-      {% for a in site.data.latest %}
-        <tr>
-          <td><a class="mono" href="{{ a.url }}">{{ a.id }}</a><span class="sm">{{ a.kind_ja }}</span></td>
-          <td>{{ a.title_ja }}</td>
-          <td><span class="mono">{{ a.packages }}</span></td>
-          <td><span class="mono">{{ a.refs }}</span></td>
-          <td class="mono">{{ a.published }}</td>
-          <td>{{ a.status_ja }}</td>
-        </tr>
-      {% endfor %}
-      </tbody>
-    </table></div>
-    <p class="note"><b>RUSTSEC-</b> で始まる番号は RustSec が発行したもので、RustSecJP が発行したものではありません。RustSecJP が発行するのは、複数の助言を束ねるキャンペーン番号（<span class="mono">RSJP-C-</span>）だけです。<a href="/incidents/campaigns/">すべての記録</a> ・ <a href="/incidents/spec/campaign-id.html">番号の仕様</a></p>
-  </div>
-</section>
-
-<section class="sec" id="research">
-  <div class="in">
-    <p class="eyebrow">02 / 研究</p>
-    <h2>研究と成果</h2>
-    <p class="lead">取り組んでいる 3 つの領域です。公開できる成果があるものだけを載せ、まだ無い領域は空のままにしています。</p>
     <div class="grid">
-      <div class="card">
-        <h3>サプライチェーンの安全性</h3>
-        <p>依存クレート、ビルド環境、公開の仕組みの安全性。悪意のある crate の手口と、その見つけ方。</p>
-        <p class="st"><b>公開中</b> ・ <a href="/incidents/campaigns/RSJP-C-2025-001/">RSJP-C-2025-001</a> ・ <a href="/incidents/">incidents</a></p>
-      </div>
-      <div class="card">
-        <h3>unsafe Rust とメモリ安全性</h3>
-        <p><code>unsafe</code> なコードの健全性、メモリ安全性、未定義動作。Miri やファジングで確かめたうえでの報告。</p>
-        <p class="st">公開物はまだありません</p>
-      </div>
-      <div class="card">
-        <h3>脆弱性の調査</h3>
-        <p>OSS の脆弱性の調査、ソースコードの解析、再現と検証。上流への報告と協調的な開示。</p>
-        <p class="st">公開物はまだありません</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="sec" id="projects">
-  <div class="in">
-    <p class="eyebrow">03 / 公開物</p>
-    <h2>公開しているもの</h2>
-    <p class="lead">公開しているリポジトリです。翻訳はいずれも非公式で、原著者による確認や公認を受けたものではありません。</p>
-    <div class="grid">
-      <a class="card" href="/incidents/"><h3>incidents</h3><p>悪意のある crate のキャンペーン記録と、キャンペーン番号の仕様。</p><p class="src">RustSecJP/incidents</p></a>
-      <a class="card" href="/rust-guide-ja/"><h3>rust-guide-ja</h3><p>ANSSI「Secure Rust Guidelines」の日本語訳。安全な Rust 開発の規則と推奨、全 11 章。</p><p class="src">原文: ANSSI-FR/rust-guide</p></a>
-      <a class="card" href="/cargo-vet-ja/"><h3>cargo-vet-ja</h3><p>Mozilla「cargo-vet」のガイドの日本語訳。依存の監査を記録し共有する、全 24 章。</p><p class="src">原文: mozilla/cargo-vet</p></a>
-      <a class="card" href="/advisory-db-ja/"><h3>advisory-db-ja</h3><p>RustSec Advisory Database の README と報告手順の日本語訳。</p><p class="src">原文: rustsec/advisory-db</p></a>
-      <a class="card" href="/trusted-publishing-ja/"><h3>trusted-publishing-ja</h3><p>crates.io「Trusted Publishing」の日本語訳。API トークンを置かずに CI から公開する。</p><p class="src">原文: crates.io docs</p></a>
-    </div>
-  </div>
-</section>
+      <section class="card c-adv" id="advisories">
+        <div class="ch"><h2>Latest Advisories</h2><a class="more" href="/incidents/campaigns/">すべて見る <span class="arr">→</span></a></div>
+        <div class="rows">
+          {% for a in site.data.latest %}
+          <a class="row" href="{{ a.url }}"><span class="id">{{ a.id }}</span><span class="ttl">{{ a.title_ja }}</span><span class="date">{{ a.published }}</span></a>
+          {% endfor %}
+        </div>
+        <p class="foot-note"><span class="mono">RSJP-C-</span> は、RustSec の助言を事件のまとまりで束ねる RustSecJP の番号です。<span class="mono">RUSTSEC-</span> の番号は RustSec が発行したもので、RustSecJP は発行しません。記録は、公開できるものから順に足していきます。</p>
+      </section>
 
-<section class="sec" id="community">
-  <div class="in">
-    <p class="eyebrow">04 / 参加</p>
-    <h2>協力して、より安全に。</h2>
-    <p class="lead">Rust のセキュリティに関心のある開発者、研究者、OSS コントリビューターが、知見を持ち寄る場です。参加のしかたは、どれも GitHub から始められます。</p>
-    <div class="join">
-      <div><h3>事件の記録に加わる</h3><p>出典の追加、誤りの指摘、新しい題材の提案。</p></div>
-      <div><h3>翻訳を直す</h3><p>誤訳の指摘、訳語の提案、原文の更新への追従。</p></div>
-      <div><h3>記事を書く</h3><p>助言や事件の技術的な背景の解説。</p></div>
-      <div><h3>悪意のある crate を見つけたら</h3><p>ここは窓口ではありません。先に crates.io へ報告してください。</p></div>
-    </div>
-    <div class="cta" style="margin-top:0">
-      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub で参加する <span class="arr">→</span></a>
-      <a class="lnk" href="https://github.com/RustSecJP/incidents/issues">記事の候補を見る <span class="arr">→</span></a>
+      <section class="card c-res" id="research">
+        <div class="ch"><h2>Research</h2><a class="more" href="/incidents/">すべて見る <span class="arr">→</span></a></div>
+        <a class="res" href="/incidents/campaigns/RSJP-C-2025-001/">
+          <span class="thumb" aria-hidden="true"></span>
+          <span>
+            <h3>finch を装う crate と、依存に隠された認証情報の窃取</h3>
+            <p>本物の写しに 1 行だけ足し、盗むコードは依存の側に置く。5 つの助言を 1 つの事件として読み解きます。</p>
+            <time datetime="2026-11-20">2026-11-20</time>
+          </span>
+        </a>
+      </section>
+
+      <section class="card c-pro" id="projects">
+        <div class="ch"><h2>Projects</h2><a class="more" href="https://github.com/orgs/RustSecJP/repositories">すべて見る <span class="arr">→</span></a></div>
+        <a class="pj" href="/incidents/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l15 8.500v17L20 37 5 28.500v-17z" fill="var(--acc)"/><path d="M20 20v17L5 28.500v-17z" fill="var(--sub)"/><path d="M20 20l15-8.500v17L20 37z" fill="var(--dim)"/></svg><span><b>incidents</b><span>悪意のある crate のキャンペーン記録</span></span></a>
+        <a class="pj" href="/rust-guide-ja/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v10c0 8.500-5.500 14.500-13 17-7.500-2.500-13-8.500-13-17V9z" fill="none" stroke="var(--sub)" stroke-width="3"/><path d="M20 8.500v23c5-2.200 9-6.800 9-12.500v-7z" fill="var(--sub)"/></svg><span><b>rust-guide-ja</b><span>ANSSI「Secure Rust Guidelines」の日本語訳</span></span></a>
+        <a class="pj" href="/cargo-vet-ja/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v10c0 8.500-5.500 14.500-13 17-7.500-2.500-13-8.500-13-17V9z" fill="none" stroke="var(--sub)" stroke-width="3"/><path d="M20 8.500v23c5-2.200 9-6.800 9-12.500v-7z" fill="var(--sub)"/></svg><span><b>cargo-vet-ja</b><span>cargo-vet ガイドの日本語訳</span></span></a>
+      </section>
+
+      <section class="card c-com" id="community">
+        <div class="ch"><h2>Community</h2><a class="more" href="https://github.com/RustSecJP">すべて見る <span class="arr">→</span></a></div>
+        <ul class="ways"><li>事件の記録</li><li>翻訳の修正</li><li>記事の執筆</li><li>題材の提案</li></ul>
+        <p class="t">RustSecJP は、すべての Rust 開発者・研究者の参加を歓迎します。</p>
+        <a class="go" href="https://github.com/RustSecJP/incidents/blob/main/CONTRIBUTING.md">コミュニティに参加する <span class="arr">→</span></a>
+      </section>
+
+      <section class="card c-abt" id="about">
+        <div class="ch"><h2>About</h2></div>
+        <p class="t">RustSecJP は、日本における Rust のセキュリティ向上を目指す非公式のコミュニティです。研究・教育・情報共有を通じて、より安全な Rust エコシステムの実現に貢献します。</p>
+        <a class="go" href="https://github.com/RustSecJP">詳しく見る <span class="arr">→</span></a>
+      </section>
+
     </div>
   </div>
 </section>
