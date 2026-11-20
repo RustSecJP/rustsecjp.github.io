@@ -31,7 +31,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset
 .hero::before{left:46%;top:100%;width:420px;transform:rotate(-52deg)}
 .hero::after{left:calc(46% + 258px);top:calc(100% - 331px);width:520px;height:1px;opacity:.55}
 .hero .in{position:relative;padding-top:62px;padding-bottom:44px}
-.hero-art{position:absolute;right:20px;top:14px;width:470px;max-width:40vw;aspect-ratio:1;opacity:var(--art);pointer-events:none;user-select:none}
+.hero-art{position:absolute;right:40px;top:50%;transform:translateY(-50%);width:min(460px,36vw);height:auto;aspect-ratio:1;opacity:var(--art);pointer-events:none;user-select:none}
 [data-theme="light"] .hero-art{filter:invert(1)}
 .rule{display:block;width:56px;height:4px;background:var(--acc);margin-bottom:22px}
 .hero h1{position:relative;margin:0;font-size:clamp(54px,7.4vw,104px);line-height:1;font-weight:800;letter-spacing:-.035em}
@@ -51,7 +51,7 @@ a:hover .arr{transform:translateX(3px)}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 24px 24px;min-width:0;display:flex;flex-direction:column}
 .c-adv{grid-column:span 7}.c-res{grid-column:span 5}.c-pro{grid-column:span 4}.c-com{grid-column:span 4}.c-abt{grid-column:span 4}
 @media(max-width:1080px){.c-adv,.c-res{grid-column:span 12}.c-pro,.c-com,.c-abt{grid-column:span 6}.c-abt{grid-column:span 12}}
-@media(max-width:720px){.c-pro,.c-com{grid-column:span 12}.in,.hd-in,.ft-in{padding:0 22px}.hd-nav{gap:22px;padding-left:18px}.hd-in{gap:16px}.logo{font-size:20px}.hero-art{opacity:.07;right:-90px;max-width:70vw}.hd-lang{display:none}}
+@media(max-width:720px){.c-pro,.c-com{grid-column:span 12}.in,.hd-in,.ft-in{padding:0 22px}.hd-nav{gap:22px;padding-left:18px}.hd-in{gap:16px}.logo{font-size:20px}.hero-art{opacity:.07;right:-70px;width:min(320px,70vw)}.hd-lang{display:none}}
 .ch{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 18px}
 .ch h2{margin:0;font-size:23px;font-weight:700;letter-spacing:-.01em;padding-left:22px;position:relative;line-height:1.3}
 .ch h2::before{content:"";position:absolute;left:0;top:.12em;bottom:.12em;width:4px;background:var(--acc);border-radius:2px}
