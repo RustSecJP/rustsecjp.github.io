@@ -11,20 +11,15 @@ lang: ja
 <h2 id="activities">活動</h2>
 
 <div class="cards" markdown="0">
+  <a class="card" href="/incidents/campaigns/RSJP-C-2025-001/">
+    <span class="tag">キャンペーン記録</span>
+    <h3>RSJP-C-2025-001</h3>
+    <p>finch を装う crate と、認証情報を盗む sha-* 依存。5 つの助言を 1 つの事件として束ねた記録。</p>
+  </a>
   <a class="card" href="/incidents/">
     <span class="tag">記録</span>
     <h3>incidents</h3>
     <p>悪意のある crate による攻撃を、事件のまとまり（キャンペーン）単位で、根拠と確信度つきで整理します。</p>
-  </a>
-  <a class="card" href="/incidents/spec/severity-score.html">
-    <span class="tag">草案 0.1</span>
-    <h3>RSJP Score</h3>
-    <p>「安全な Rust だけで踏めるか」「ビルド時に動くか」などを軸にした、Rust 専用の重要度の物差し。</p>
-  </a>
-  <a class="card" href="/incidents/calculator/">
-    <span class="tag">ツール</span>
-    <h3>計算ツール</h3>
-    <p>軸を選ぶと、RSJP Score の点数と内訳がその場で出ます。</p>
   </a>
   <a class="card" href="https://github.com/RustSecJP/incidents/issues">
     <span class="tag">募集中</span>

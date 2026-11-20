@@ -15,20 +15,15 @@ permalink: /en/
 Most of our content is written in Japanese.
 
 <div class="cards" markdown="0">
+  <a class="card" href="/incidents/campaigns/RSJP-C-2025-001/">
+    <span class="tag">Campaign record</span>
+    <h3>RSJP-C-2025-001</h3>
+    <p>Crates impersonating finch with a credential-stealing sha-* dependency: five advisories grouped as one campaign.</p>
+  </a>
   <a class="card" href="/incidents/">
     <span class="tag">Records</span>
     <h3>incidents</h3>
     <p>Malicious-crate attacks grouped by campaign, with the evidence and confidence for each link.</p>
-  </a>
-  <a class="card" href="/incidents/spec/severity-score.html">
-    <span class="tag">Draft 0.1</span>
-    <h3>RSJP Score</h3>
-    <p>A Rust-specific severity scale: reachable from safe Rust? triggered at build time? how widely depended on?</p>
-  </a>
-  <a class="card" href="/incidents/calculator/">
-    <span class="tag">Tool</span>
-    <h3>Score calculator</h3>
-    <p>Pick the metrics and get the score and its vector string.</p>
   </a>
 </div>
 
