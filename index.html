@@ -1,47 +1,47 @@
 ---
 layout: home
 lang: ja
-title: RustSecJP — Securing the Rust Ecosystem.
+title: RustSecJP — Rust のセキュリティ研究と情報共有
 description: RustSecJP は、日本の Rust セキュリティ研究・情報共有コミュニティです。悪意のある crate のキャンペーン記録、Rust セキュリティ文書の日本語訳を公開しています。
 ---
 <section class="hero">
   <div class="in">
     <img class="hero-art" src="/assets/logo-alpha.png" alt="" width="640" height="640">
     <h1>Rust<span>Sec</span>JP</h1>
-    <p class="tag">Securing the Rust Ecosystem.</p>
+    <p class="tag">Rust のエコシステムを、より安全に。</p>
     <p class="desc">日本の Rust セキュリティ研究・情報共有コミュニティ。脆弱性の調査と分析、OSS への貢献、セキュリティの知見の共有に取り組んでいます。</p>
     <p class="un">非公式のコミュニティです。RustSec・Rust Project・Rust Foundation とは提携していません。</p>
     <div class="cta">
-      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> View on GitHub <span class="arr">→</span></a>
-      <a class="lnk" href="#research">Explore research <span class="arr">→</span></a>
+      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub で見る <span class="arr">→</span></a>
+      <a class="lnk" href="#research">研究を見る <span class="arr">→</span></a>
     </div>
   </div>
 </section>
 
 <section class="latest">
   <div class="in">
-    <p class="bar">Latest</p>
+    <p class="bar">新着</p>
     {% assign l = site.data.latest[0] %}
     <a class="row" href="{{ l.url }}">
-      <span class="pill">{{ l.kind }}</span>
+      <span class="pill">{{ l.kind_ja }}</span>
       <span class="ttl">{{ l.id }}: {{ l.title_ja }}</span>
       <span class="date">{{ l.published }}</span>
-      <span class="all">View <span class="arr">→</span></span>
+      <span class="all">読む <span class="arr">→</span></span>
     </a>
   </div>
 </section>
 
 <section class="sec" id="advisories">
   <div class="in">
-    <p class="eyebrow">01 / ADVISORIES</p>
-    <h2>Latest Advisories</h2>
+    <p class="eyebrow">01 / 記録</p>
+    <h2>事件と脆弱性の記録</h2>
     <p class="lead">Rust のエコシステムで起きた事件と脆弱性の記録です。crate ごとに出る助言を、事件のまとまり（キャンペーン）単位で束ね、根拠と確信度を付けて公開しています。</p>
     <div class="tw"><table>
-      <thead><tr><th>ID</th><th>内容</th><th>対象の crate</th><th>対応する助言</th><th>公開日</th><th>状態</th></tr></thead>
+      <thead><tr><th>番号</th><th>内容</th><th>対象の crate</th><th>対応する助言</th><th>公開日</th><th>状態</th></tr></thead>
       <tbody>
       {% for a in site.data.latest %}
         <tr>
-          <td><a class="mono" href="{{ a.url }}">{{ a.id }}</a><span class="sm">{{ a.kind }}</span></td>
+          <td><a class="mono" href="{{ a.url }}">{{ a.id }}</a><span class="sm">{{ a.kind_ja }}</span></td>
           <td>{{ a.title_ja }}</td>
           <td><span class="mono">{{ a.packages }}</span></td>
           <td><span class="mono">{{ a.refs }}</span></td>
@@ -57,22 +57,22 @@ description: RustSecJP は、日本の Rust セキュリティ研究・情報共
 
 <section class="sec" id="research">
   <div class="in">
-    <p class="eyebrow">02 / RESEARCH</p>
-    <h2>Research &amp; Findings</h2>
+    <p class="eyebrow">02 / 研究</p>
+    <h2>研究と成果</h2>
     <p class="lead">取り組んでいる 3 つの領域です。公開できる成果があるものだけを載せ、まだ無い領域は空のままにしています。</p>
     <div class="grid">
       <div class="card">
-        <h3>Supply Chain Security</h3>
+        <h3>サプライチェーンの安全性</h3>
         <p>依存クレート、ビルド環境、公開の仕組みの安全性。悪意のある crate の手口と、その見つけ方。</p>
         <p class="st"><b>公開中</b> ・ <a href="/incidents/campaigns/RSJP-C-2025-001/">RSJP-C-2025-001</a> ・ <a href="/incidents/">incidents</a></p>
       </div>
       <div class="card">
-        <h3>Unsafe Rust &amp; Memory Safety</h3>
+        <h3>unsafe Rust とメモリ安全性</h3>
         <p><code>unsafe</code> なコードの健全性、メモリ安全性、未定義動作。Miri やファジングで確かめたうえでの報告。</p>
         <p class="st">公開物はまだありません</p>
       </div>
       <div class="card">
-        <h3>Vulnerability Research</h3>
+        <h3>脆弱性の調査</h3>
         <p>OSS の脆弱性の調査、ソースコードの解析、再現と検証。上流への報告と協調的な開示。</p>
         <p class="st">公開物はまだありません</p>
       </div>
@@ -82,8 +82,8 @@ description: RustSecJP は、日本の Rust セキュリティ研究・情報共
 
 <section class="sec" id="projects">
   <div class="in">
-    <p class="eyebrow">03 / PROJECTS</p>
-    <h2>Open Source</h2>
+    <p class="eyebrow">03 / 公開物</p>
+    <h2>公開しているもの</h2>
     <p class="lead">公開しているリポジトリです。翻訳はいずれも非公式で、原著者による確認や公認を受けたものではありません。</p>
     <div class="grid">
       <a class="card" href="/incidents/"><h3>incidents</h3><p>悪意のある crate のキャンペーン記録と、キャンペーン番号の仕様。</p><p class="src">RustSecJP/incidents</p></a>
@@ -97,8 +97,8 @@ description: RustSecJP は、日本の Rust セキュリティ研究・情報共
 
 <section class="sec" id="community">
   <div class="in">
-    <p class="eyebrow">04 / COMMUNITY</p>
-    <h2>Better Security Through Collaboration.</h2>
+    <p class="eyebrow">04 / 参加</p>
+    <h2>協力して、より安全に。</h2>
     <p class="lead">Rust のセキュリティに関心のある開発者、研究者、OSS コントリビューターが、知見を持ち寄る場です。参加のしかたは、どれも GitHub から始められます。</p>
     <div class="join">
       <div><h3>事件の記録に加わる</h3><p>出典の追加、誤りの指摘、新しい題材の提案。</p></div>
@@ -107,7 +107,7 @@ description: RustSecJP は、日本の Rust セキュリティ研究・情報共
       <div><h3>悪意のある crate を見つけたら</h3><p>ここは窓口ではありません。先に crates.io へ報告してください。</p></div>
     </div>
     <div class="cta" style="margin-top:0">
-      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> Join on GitHub <span class="arr">→</span></a>
+      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub で参加する <span class="arr">→</span></a>
       <a class="lnk" href="https://github.com/RustSecJP/incidents/issues">記事の候補を見る <span class="arr">→</span></a>
     </div>
   </div>
