@@ -1,0 +1,81 @@
+:root{--bg:#0b0b0d;--ink:#f4f4f5;--sub:#a1a1aa;--dim:#71717a;--line:#26262b;--panel:#121216;--acc:#f26b21;--max:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;color:var(--ink);font:16px/1.8 Inter,"Helvetica Neue",Arial,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(900px 520px at 0% 0%,rgba(242,107,33,.20),transparent 62%),radial-gradient(900px 700px at 100% 55%,rgba(255,255,255,.06),transparent 60%),var(--bg);background-color:var(--bg);background-repeat:no-repeat}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--bg);padding:8px 12px;z-index:9}
+.in,.hd-in,.ft-in{max-width:var(--max);margin:0 auto;padding:0 28px}
+/* ヘッダー */
+.hd{position:sticky;top:0;z-index:5;background:rgba(11,11,13,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:14px;font-weight:700;font-size:19px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.logo-mark{width:40px;height:40px;background:var(--acc);-webkit-mask:url(logo-alpha.png) center/contain no-repeat;mask:url(logo-alpha.png) center/contain no-repeat}
+.hd-nav{display:flex;align-items:center;gap:34px;overflow-x:auto;scrollbar-width:none}
+.hd-nav::-webkit-scrollbar{display:none}
+.hd-nav a{text-decoration:none;font-size:15px;color:var(--ink);white-space:nowrap;opacity:.9}
+.hd-nav a:hover{opacity:1;color:var(--acc)}
+.hd-lang{font-size:13px!important;color:var(--sub)!important;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+.hd-gh{display:flex}
+/* ヒーロー */
+.hero{position:relative;overflow:hidden}
+.hero .in{position:relative;padding-top:104px;padding-bottom:36px;min-height:560px}
+.hero-art{position:absolute;right:-60px;top:36px;width:560px;max-width:52vw;aspect-ratio:1;opacity:.13;pointer-events:none;user-select:none}
+.hero h1{position:relative;margin:0;font-size:clamp(56px,10.5vw,124px);line-height:1;font-weight:700;letter-spacing:-.045em}
+.hero h1 span{color:var(--acc)}
+.hero .tag{position:relative;margin:26px 0 0;max-width:22em;font-size:clamp(20px,2.5vw,29px);line-height:1.45;color:var(--sub);letter-spacing:-.01em}
+.hero .desc{position:relative;margin:18px 0 0;max-width:36em;color:var(--sub);font-size:15.5px}
+.hero .un{position:relative;margin:14px 0 0;font-size:13px;color:var(--dim)}
+.cta{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:15px 30px;border:1px solid rgba(255,255,255,.75);border-radius:999px;text-decoration:none;font-size:17px;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.lnk{text-decoration:none;font-size:16px;color:var(--ink)}
+.lnk:hover{color:var(--acc)}
+.arr{display:inline-block;transition:transform .15s}
+a:hover .arr{transform:translateX(3px)}
+/* Latest */
+.latest{border-top:1px solid var(--line);padding:44px 0 56px}
+.bar{display:flex;align-items:center;gap:22px;margin:0 0 22px;font-size:20px;font-weight:700}
+.bar::before{content:"";width:52px;height:3px;background:var(--acc);border-radius:2px}
+.row{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:14px 30px;align-items:center;padding:6px 0;text-decoration:none}
+.row .ttl{font-size:17px;overflow-wrap:anywhere}
+.row:hover .ttl{color:var(--acc)}
+.pill{padding:3px 11px;border:1px solid rgba(242,107,33,.65);border-radius:7px;color:var(--acc);font-size:13.5px;white-space:nowrap;background:rgba(242,107,33,.08)}
+.date{color:var(--dim);font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.all{font-size:16px;white-space:nowrap;text-decoration:none}
+.all:hover{color:var(--acc)}
+@media(max-width:760px){.row{grid-template-columns:auto 1fr}.row .ttl{grid-column:1/-1}.hd-nav{gap:20px}.hero .in{padding-top:64px;min-height:0}.hero-art{opacity:.08;right:-120px}}
+/* 区画 */
+.sec{border-top:1px solid var(--line);padding:84px 0}
+.eyebrow{margin:0 0 10px;color:var(--acc);font-size:12.5px;font-weight:700;letter-spacing:.16em}
+.sec h2{margin:0 0 14px;font-size:clamp(28px,4vw,42px);line-height:1.2;letter-spacing:-.03em;font-weight:700}
+.sec .lead{margin:0 0 36px;max-width:44em;color:var(--sub)}
+.sec .lead a{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+th,td{padding:15px 20px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{color:var(--dim);font-size:12px;letter-spacing:.1em;font-weight:700;white-space:nowrap}
+td code,.mono{font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--dim)}
+td a:hover{color:var(--acc);border-color:var(--acc)}
+td .sm{display:block;color:var(--dim);font-size:13px;margin-top:2px}
+.note{margin:18px 0 0;color:var(--dim);font-size:13.5px;max-width:52em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;padding:26px;border:1px solid var(--line);border-radius:14px;background:var(--panel);text-decoration:none;min-height:100%}
+a.card:hover{border-color:rgba(242,107,33,.7)}
+.card h3{margin:0 0 8px;font-size:18px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--sub);font-size:14.5px;line-height:1.75}
+.card .st{margin-top:auto;padding-top:18px;font-size:13px;color:var(--dim)}
+.card .st a{color:var(--ink)}
+.card .st b{color:var(--acc);font-weight:700}
+.card .src{margin-top:auto;padding-top:16px;font-size:12.5px;color:var(--dim)}
+.join{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin-bottom:34px}
+.join div{padding:22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.join h3{margin:0 0 6px;font-size:16px}
+.join p{margin:0;color:var(--sub);font-size:14px;line-height:1.7}
+.ft{border-top:1px solid var(--line);padding:34px 0 52px;color:var(--dim);font-size:13px}
+.ft p{margin:4px 0;max-width:70em}
+.ft b{color:var(--sub)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arr,.btn{transition:none}}

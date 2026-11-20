@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'ja' }}">
+{% assign en = false %}{% if page.lang == "en" %}{% assign en = true %}{% endif %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="ja" href="{{ '/' | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="RustSecJP">
+<meta property="og:image" content="https://rustsecjp.github.io/icon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"RustSecJP","url":"https://rustsecjp.github.io/","description":{{ page.description | jsonify }},"sameAs":["https://github.com/RustSecJP"]}
+</script>
+<link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+<a class="skip" href="#main">{% if en %}Skip to content{% else %}本文へ移動{% endif %}</a>
+<header class="hd">
+  <div class="hd-in">
+    <a class="logo" href="{% if en %}/en/{% else %}/{% endif %}"><span class="logo-mark" aria-hidden="true"></span>RustSecJP</a>
+    <nav class="hd-nav" aria-label="Main">
+      <a href="#advisories">Advisories</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#community">Community</a>
+      {% if en %}<a class="hd-lang" href="/" lang="ja">日本語</a>{% else %}<a class="hd-lang" href="/en/" lang="en">EN</a>{% endif %}
+      <a class="hd-gh" href="https://github.com/RustSecJP" aria-label="GitHub"><svg viewBox="0 0 16 16" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<footer class="ft">
+  <div class="ft-in">
+    {% if en %}
+    <p>RustSecJP is an <b>unofficial</b> community. It is not affiliated with RustSec, the Rust Project, or the Rust Foundation, and does not issue RUSTSEC advisory IDs.</p>
+    <p>The logo is based on the Rust logo (Rust Foundation, CC BY 4.0). Rust and the Rust logo are trademarks of the Rust Foundation.</p>
+    {% else %}
+    <p>RustSecJP は<b>非公式</b>のコミュニティです。RustSec・Rust Project・Rust Foundation とは提携しておらず、RUSTSEC の助言 ID は発行しません。</p>
+    <p>ロゴは Rust のロゴ（Rust Foundation、CC BY 4.0）をもとにしています。Rust と Rust のロゴは Rust Foundation の商標です。</p>
+    {% endif %}
+    <p><a href="https://github.com/RustSecJP">GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

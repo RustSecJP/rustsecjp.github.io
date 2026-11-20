@@ -1,0 +1,12 @@
+# トップページの「Latest」と Advisories の表に出す項目。新しいものを上に足す。
+# RUSTSEC / GHSA の番号は発行元のもので、RustSecJP が発行したものではない。
+- kind: Campaign
+  id: RSJP-C-2025-001
+  title_ja: finch を装う crate と、認証情報を盗む sha-* 依存
+  title_en: Crates impersonating finch with a credential-stealing sha-* dependency
+  packages: finch-rust, sha-rust, finch-rst, sha-rst, finch_cli_rust
+  refs: RUSTSEC-2025-0146, 0148, 0150, 0151, 0152
+  published: 2026-11-20
+  status_ja: 公開
+  status_en: Published
+  url: /incidents/campaigns/RSJP-C-2025-001/
