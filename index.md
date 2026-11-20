@@ -1,15 +1,11 @@
 ---
-title: RustSecJP ― Rust のセキュリティを、日本語で。
+title: RustSecJP
 lang: ja
 ---
 <div class="hero" markdown="0">
-  <span class="badge-un">非公式のコミュニティ</span>
-  <h1>Rust のセキュリティを、<br>日本語で。</h1>
-  <p class="lead">脆弱性、サプライチェーン攻撃、バイナリ解析。Rust のセキュリティに関する知見を、日本語で、検証できる形で届けます。</p>
-  <div class="btns">
-    <a class="btn pri" href="#translations">日本語訳を読む</a>
-    <a class="btn" href="/incidents/">事件の記録を見る</a>
-  </div>
+  <span class="badge-un">非公式コミュニティ</span>
+  <h1>RustSecJP</h1>
+  <p class="lead">RustSecJP は、Rust のセキュリティに関する知見を日本語で公開する非公式のコミュニティです。脆弱性、サプライチェーン攻撃、バイナリ解析を対象とし、出典と確信度を明記して掲載します。</p>
 </div>
 
 <h2 id="activities">活動</h2>

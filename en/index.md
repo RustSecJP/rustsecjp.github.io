@@ -1,17 +1,13 @@
 ---
-title: RustSecJP — Rust security, in Japanese.
+title: RustSecJP
 description: An unofficial community bringing Rust security knowledge — vulnerabilities, supply-chain attacks, binary analysis — to Japanese readers in a verifiable form.
 lang: en
 permalink: /en/
 ---
 <div class="hero" markdown="0">
   <span class="badge-un">Unofficial community</span>
-  <h1>Rust security,<br>in Japanese.</h1>
-  <p class="lead">Vulnerabilities, supply-chain attacks, binary analysis. We bring Rust security knowledge to Japanese readers, in a form that can be verified.</p>
-  <div class="btns">
-    <a class="btn pri" href="#translations">Translations</a>
-    <a class="btn" href="/incidents/">Incident records</a>
-  </div>
+  <h1>RustSecJP</h1>
+  <p class="lead">RustSecJP is an unofficial community that publishes Rust security material in Japanese. It covers vulnerabilities, supply-chain attacks and binary analysis, and states its sources and confidence.</p>
 </div>
 
 <h2 id="activities">Activities</h2>
