@@ -1,0 +1,21 @@
+# RustSecJP
+
+> RustSecJP は、Rust のセキュリティに関する知見を日本語で届ける非公式のコミュニティ。RustSec・Rust Project・Rust Foundation とは提携していない。RUSTSEC の助言 ID は発行しない。
+
+## 日本語訳（非公式）
+
+- [安全な Rust アプリケーション開発の指針（ANSSI「Secure Rust Guidelines」日本語訳）](https://rustsecjp.github.io/rust-guide-ja/): フランスの政府機関 ANSSI による Rust のセキュアコーディング指針の日本語訳。全 11 章と、61 件の規則・推奨の一覧。
+- [cargo-vet ガイド（Mozilla「cargo-vet」公式ドキュメント日本語訳）](https://rustsecjp.github.io/cargo-vet-ja/): 依存クレートの監査を共有するツール cargo-vet の公式ガイドの日本語訳。全 24 章。
+- [RustSec Advisory Database の文書（README・CONTRIBUTING 日本語訳）](https://rustsecjp.github.io/advisory-db-ja/): 脆弱性データベース RustSec の概要、助言の書式、報告手順の日本語訳。
+- [crates.io の Trusted Publishing（公式ドキュメント日本語訳）](https://rustsecjp.github.io/trusted-publishing-ja/): API トークンを置かずに CI からクレートを公開する仕組みの日本語訳。
+
+## 事件の記録と採点方式
+
+- [incidents](https://rustsecjp.github.io/incidents/): 悪意のある crate による攻撃を、キャンペーン単位で整理する記録。
+- [RSJP Score](https://rustsecjp.github.io/incidents/spec/severity-score.html): Rust 専用の重要度の採点方式（草案 0.1）。0.0〜10.0 の点数と内訳の文字列で表す。
+- [キャンペーン番号 RSJP-C の仕様](https://rustsecjp.github.io/incidents/spec/campaign-id.html): 複数の助言を事件単位で束ねる番号（草案 0.1）。
+- [RSJP Score 計算ツール](https://rustsecjp.github.io/incidents/calculator/)
+
+## 注意
+
+- 翻訳はどれも非公式で、原著者の確認や公認は受けていない。内容が食い違う場合は原文が優先される。

@@ -1,0 +1,14 @@
+title: RustSecJP
+description: Rust のセキュリティを、日本語で。脆弱性、サプライチェーン攻撃、バイナリ解析の知見を、検証できる形で届ける非公式コミュニティ。
+lang: ja
+url: https://rustsecjp.github.io
+baseurl: ""
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
