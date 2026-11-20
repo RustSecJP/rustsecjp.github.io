@@ -1,7 +1,7 @@
 :root{--bg:#0b0b0d;--ink:#f4f4f5;--sub:#a1a1aa;--dim:#71717a;--line:#26262b;--panel:#121216;--acc:#f26b21;--max:1160px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;color:var(--ink);font:16px/1.8 Inter,"Helvetica Neue",Arial,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;-webkit-font-smoothing:antialiased;
+body{margin:0;color:var(--ink);font:16px/1.8 Inter,"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;-webkit-font-smoothing:antialiased;
   background:radial-gradient(900px 520px at 0% 0%,rgba(242,107,33,.20),transparent 62%),radial-gradient(900px 700px at 100% 55%,rgba(255,255,255,.06),transparent 60%),var(--bg);background-color:var(--bg);background-repeat:no-repeat}
 a{color:inherit}
 a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
@@ -57,7 +57,7 @@ table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{padding:15px 20px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
 tr:last-child td{border-bottom:0}
 th{color:var(--dim);font-size:12px;letter-spacing:.1em;font-weight:700;white-space:nowrap}
-td code,.mono{font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+td code,.mono{font:13.5px/1.6 "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--dim)}
 td a:hover{color:var(--acc);border-color:var(--acc)}
 td .sm{display:block;color:var(--dim);font-size:13px;margin-top:2px}
