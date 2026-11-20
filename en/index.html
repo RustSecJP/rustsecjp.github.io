@@ -1,0 +1,101 @@
+---
+layout: home
+lang: en
+permalink: /en/
+title: RustSecJP — Securing the Rust Ecosystem.
+description: RustSecJP is a Japanese community for Rust security research and information sharing. It publishes campaign records for malicious crates and Japanese translations of Rust security documents.
+---
+<section class="hero">
+  <div class="in">
+    <img class="hero-art" src="/assets/logo-alpha.png" alt="" width="640" height="640">
+    <h1>Rust<span>Sec</span>JP</h1>
+    <p class="tag">Japanese community for Rust security research and vulnerability information.</p>
+    <p class="un">An unofficial community. Not affiliated with RustSec, the Rust Project, or the Rust Foundation.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> View on GitHub <span class="arr">→</span></a>
+      <a class="lnk" href="#research">Explore research <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="latest">
+  <div class="in">
+    <p class="bar">Latest</p>
+    {% assign l = site.data.latest[0] %}
+    <a class="row" href="{{ l.url }}">
+      <span class="pill">{{ l.kind }}</span>
+      <span class="ttl">{{ l.id }}: {{ l.title_en }}</span>
+      <span class="date">{{ l.published }}</span>
+      <span class="all">View <span class="arr">→</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="sec" id="advisories">
+  <div class="in">
+    <p class="eyebrow">01 / ADVISORIES</p>
+    <h2>Latest Advisories</h2>
+    <p class="lead">Records of incidents and vulnerabilities in the Rust ecosystem. We group per-crate advisories into campaigns and state the evidence and confidence for each link. The records are written in Japanese.</p>
+    <div class="tw"><table>
+      <thead><tr><th>ID</th><th>SUMMARY</th><th>PACKAGES</th><th>RELATED ADVISORIES</th><th>PUBLISHED</th><th>STATUS</th></tr></thead>
+      <tbody>
+      {% for a in site.data.latest %}
+        <tr>
+          <td><a class="mono" href="{{ a.url }}">{{ a.id }}</a><span class="sm">{{ a.kind }}</span></td>
+          <td>{{ a.title_en }}</td>
+          <td><span class="mono">{{ a.packages }}</span></td>
+          <td><span class="mono">{{ a.refs }}</span></td>
+          <td class="mono">{{ a.published }}</td>
+          <td>{{ a.status_en }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+    <p class="note">IDs starting with <b>RUSTSEC-</b> are issued by RustSec, not by RustSecJP. RustSecJP only issues campaign IDs (<span class="mono">RSJP-C-</span>) that group existing advisories. <a href="/incidents/campaigns/">All records</a></p>
+  </div>
+</section>
+
+<section class="sec" id="research">
+  <div class="in">
+    <p class="eyebrow">02 / RESEARCH</p>
+    <h2>Research &amp; Findings</h2>
+    <p class="lead">Our three areas of work. We list only what has been published; areas without results yet are left empty.</p>
+    <div class="grid">
+      <div class="card"><h3>Supply Chain Security</h3><p>Dependencies, build environments and publishing. How malicious crates work and how to find them.</p><p class="st"><b>Published</b> ・ <a href="/incidents/campaigns/RSJP-C-2025-001/">RSJP-C-2025-001</a> ・ <a href="/incidents/">incidents</a></p></div>
+      <div class="card"><h3>Unsafe Rust &amp; Memory Safety</h3><p>Soundness of <code>unsafe</code> code, memory safety and undefined behavior, verified with Miri and fuzzing before reporting.</p><p class="st">Nothing published yet</p></div>
+      <div class="card"><h3>Vulnerability Research</h3><p>Finding, reproducing and verifying vulnerabilities in open-source software, with upstream reporting and coordinated disclosure.</p><p class="st">Nothing published yet</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects">
+  <div class="in">
+    <p class="eyebrow">03 / PROJECTS</p>
+    <h2>Open Source</h2>
+    <p class="lead">Our public repositories. The translations are unofficial and are not endorsed by the original authors.</p>
+    <div class="grid">
+      <a class="card" href="/incidents/"><h3>incidents</h3><p>Campaign records for malicious crates, and the campaign ID specification.</p><p class="src">RustSecJP/incidents</p></a>
+      <a class="card" href="/rust-guide-ja/"><h3>rust-guide-ja</h3><p>Japanese translation of ANSSI's Secure Rust Guidelines.</p><p class="src">Source: ANSSI-FR/rust-guide</p></a>
+      <a class="card" href="/cargo-vet-ja/"><h3>cargo-vet-ja</h3><p>Japanese translation of the cargo-vet book.</p><p class="src">Source: mozilla/cargo-vet</p></a>
+      <a class="card" href="/advisory-db-ja/"><h3>advisory-db-ja</h3><p>Japanese translation of the RustSec Advisory Database README and contributing guides.</p><p class="src">Source: rustsec/advisory-db</p></a>
+      <a class="card" href="/trusted-publishing-ja/"><h3>trusted-publishing-ja</h3><p>Japanese translation of the crates.io Trusted Publishing documentation.</p><p class="src">Source: crates.io docs</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="community">
+  <div class="in">
+    <p class="eyebrow">04 / COMMUNITY</p>
+    <h2>Better Security Through Collaboration.</h2>
+    <p class="lead">A place for developers, researchers and open-source contributors interested in Rust security to share what they know. Everything starts on GitHub.</p>
+    <div class="join">
+      <div><h3>Improve the records</h3><p>Add sources, point out errors, propose new topics.</p></div>
+      <div><h3>Fix translations</h3><p>Report mistranslations and help track upstream changes.</p></div>
+      <div><h3>Write</h3><p>Explain the technical background of advisories and incidents.</p></div>
+      <div><h3>Found a malicious crate?</h3><p>We are not a reporting channel. Report it to crates.io first.</p></div>
+    </div>
+    <div class="cta" style="margin-top:0">
+      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> Join on GitHub <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
