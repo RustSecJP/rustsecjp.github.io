@@ -79,3 +79,5 @@ a.card:hover{border-color:rgba(242,107,33,.7)}
 .ft p{margin:4px 0;max-width:70em}
 .ft b{color:var(--sub)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arr,.btn{transition:none}}
+td:first-child,td:nth-child(5),td:last-child{white-space:nowrap}
+td:nth-child(3),td:nth-child(4){min-width:15em}
