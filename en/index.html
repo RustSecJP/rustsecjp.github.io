@@ -48,8 +48,7 @@ description: RustSecJP is a Japanese community for Rust security research and in
       <section class="card c-pro" id="projects">
         <div class="ch"><h2>Projects</h2><a class="more" href="https://github.com/orgs/RustSecJP/repositories">View all <span class="arr">→</span></a></div>
         <a class="pj" href="/incidents/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l15 8.500v17L20 37 5 28.500v-17z" fill="var(--acc)"/><path d="M20 20v17L5 28.500v-17z" fill="var(--sub)"/><path d="M20 20l15-8.500v17L20 37z" fill="var(--dim)"/></svg><span><b>incidents</b><span>Campaign records for malicious crates</span></span></a>
-        <a class="pj" href="/rust-guide-ja/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v10c0 8.500-5.500 14.500-13 17-7.500-2.500-13-8.500-13-17V9z" fill="none" stroke="var(--sub)" stroke-width="3"/><path d="M20 8.500v23c5-2.200 9-6.800 9-12.500v-7z" fill="var(--sub)"/></svg><span><b>rust-guide-ja</b><span>Japanese translation of ANSSI's Secure Rust Guidelines</span></span></a>
-        <a class="pj" href="/cargo-vet-ja/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v10c0 8.500-5.500 14.500-13 17-7.500-2.500-13-8.500-13-17V9z" fill="none" stroke="var(--sub)" stroke-width="3"/><path d="M20 8.500v23c5-2.200 9-6.800 9-12.500v-7z" fill="var(--sub)"/></svg><span><b>cargo-vet-ja</b><span>Japanese translation of the cargo-vet book</span></span></a>
+        <a class="pj" href="#translations"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 8h11c2 0 3 1 3 3v22c0-2-1-3-3-3H6zM34 8H23c-2 0-3 1-3 3v22c0-2 1-3 3-3h11z" fill="none" stroke="var(--sub)" stroke-width="3"/></svg><span><b>Translations</b><span>{{ site.data.translations | size }} Japanese translations</span></span></a>
       </section>
 
       <section class="card c-com" id="community">
@@ -63,6 +62,16 @@ description: RustSecJP is a Japanese community for Rust security research and in
         <div class="ch"><h2>About</h2></div>
         <p class="t">RustSecJP is an unofficial community working to improve Rust security in Japan. Through research, education and information sharing, it contributes to a safer Rust ecosystem.</p>
         <a class="go" href="https://github.com/RustSecJP">Learn more <span class="arr">→</span></a>
+      </section>
+
+      <section class="card c-trn" id="translations">
+        <div class="ch"><h2>Translations</h2><a class="more" href="https://github.com/orgs/RustSecJP/repositories">Repositories <span class="arr">→</span></a></div>
+        <p class="t">Unofficial Japanese translations of Rust security books and documents. The originals take precedence.</p>
+        <div class="trn">
+          {% for t in site.data.translations %}
+          <a class="tr" href="{{ t.url }}"><span class="org">{{ t.org_en }}</span><b>{{ t.title_en }}</b><span class="d">{{ t.desc_en }}</span></a>
+          {% endfor %}
+        </div>
       </section>
 
     </div>
