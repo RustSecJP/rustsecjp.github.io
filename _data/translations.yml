@@ -1,0 +1,57 @@
+# トップページの「翻訳」の段に出す一覧。上から順に並ぶ。
+- url: /rust-guide-ja/
+  org: ANSSI（フランス）
+  org_en: ANSSI (France)
+  title_ja: 安全な Rust アプリケーション開発の指針
+  title_en: Secure Rust Guidelines
+  desc_ja: フランスの政府機関による、Rust のセキュアコーディングの規則と推奨。
+  desc_en: Secure coding rules and recommendations for Rust by the French national cybersecurity agency.
+- url: /rust-guidelines-ja/
+  org: Microsoft
+  org_en: Microsoft
+  title_ja: Pragmatic Rust Guidelines
+  title_en: Pragmatic Rust Guidelines
+  desc_ja: スケールする慣用的な Rust を書くための、実用的な設計ガイドライン集。
+  desc_en: Practical design guidelines for idiomatic Rust that scales.
+- url: /safety-critical-rust-coding-guidelines-ja/
+  org: Safety-Critical Rust Consortium
+  org_en: Safety-Critical Rust Consortium
+  title_ja: Safety-Critical Rust Coding Guidelines
+  title_en: Safety-Critical Rust Coding Guidelines
+  desc_ja: 自動車・航空・医療など、安全性が重要な分野で Rust を使うためのガイドライン。
+  desc_en: Coding guidelines for using Rust in safety-critical domains.
+- url: /unsafe-code-guidelines-ja/
+  org: Rust Project
+  org_en: Rust Project
+  title_ja: Unsafe Code Guidelines Reference
+  title_en: Unsafe Code Guidelines Reference
+  desc_ja: unsafe なコードの用語集（健全性、未定義動作、有効性不変条件など）。
+  desc_en: Glossary and notes on the rules for unsafe code.
+- url: /kani-ja/
+  org: Kani（AWS）
+  org_en: Kani (AWS)
+  title_ja: Kani Rust Verifier
+  title_en: Kani Rust Verifier
+  desc_ja: Rust のコードをモデル検査で確かめるツールの公式ドキュメント。
+  desc_en: Docs for the model checker that verifies Rust code, including unsafe code.
+- url: /cargo-vet-ja/
+  org: Mozilla
+  org_en: Mozilla
+  title_ja: cargo-vet ガイド
+  title_en: cargo-vet book
+  desc_ja: 依存クレートの監査を記録して共有するツール。
+  desc_en: Record and share audits of your dependencies.
+- url: /cargo-deny-ja/
+  org: Embark Studios
+  org_en: Embark Studios
+  title_ja: cargo-deny の本
+  title_en: The cargo-deny Book
+  desc_ja: 依存の助言・使ってはいけないクレート・ライセンス・取得元を確かめるツール。
+  desc_en: Check dependencies for advisories, bans, licenses, and sources.
+- url: /supply-chain-tools-ja/
+  org: rust-secure-code / crev-dev
+  org_en: rust-secure-code / crev-dev
+  title_ja: cargo-auditable と cargo-crev
+  title_en: cargo-auditable and cargo-crev
+  desc_ja: 実行ファイルに依存の一覧を埋め込むツールと、レビューを共有するツール。
+  desc_en: Embed dependency lists in binaries, and share code reviews.

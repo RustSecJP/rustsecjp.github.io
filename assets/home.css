@@ -101,3 +101,13 @@ a:hover .arr{transform:translateX(3px)}
 .ft-note{margin:18px 0 0;color:var(--dim);font-size:12px;line-height:1.7;max-width:90em}
 .ft-note b{color:var(--sub)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arr,.btn{transition:none}}
+
+.c-trn{grid-column:span 12}
+.trn{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:6px}
+.tr{display:flex;flex-direction:column;gap:6px;padding:16px 16px 18px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);background:var(--panel2);transition:border-color .15s}
+.tr:hover{border-color:var(--acc)}
+.tr .org{font-size:12px;color:var(--dim)}
+.tr b{font-size:15px;line-height:1.45}
+.tr .d{font-size:13px;color:var(--sub);line-height:1.65}
+@media(max-width:1080px){.trn{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.trn{grid-template-columns:1fr}}
