@@ -7,6 +7,7 @@ a{color:inherit}
 .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:var(--bg);padding:6px 10px}
 .hd{padding:44px 0 0}
 .mark{display:flex;align-items:center;justify-content:center;gap:16px;text-decoration:none;font:800 54px/1 Inter,sans-serif;letter-spacing:-.02em}
+.mark span{color:#fff;-webkit-text-stroke:3px #141414;paint-order:stroke fill;letter-spacing:.01em}
 .mark img{width:56px;height:56px;filter:invert(1)}
 [data-theme="dark"] .mark img{filter:none}
 .menu{display:flex;align-items:center;gap:16px;margin:26px 0 0;font:400 14px/1 "JetBrains Mono",ui-monospace,monospace}
