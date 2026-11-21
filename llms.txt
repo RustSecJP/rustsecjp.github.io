@@ -10,6 +10,10 @@
 - [Pragmatic Rust Guidelines（Microsoft「Pragmatic Rust Guidelines」日本語訳）](https://rustsecjp.github.io/rust-guidelines-ja/): スケールする慣用的な Rust を書くための設計ガイドライン集の日本語訳。
 - [RustSec Advisory Database の文書（README・CONTRIBUTING 日本語訳）](https://rustsecjp.github.io/advisory-db-ja/): 脆弱性データベース RustSec の概要、助言の書式、報告手順の日本語訳。
 - [crates.io の Trusted Publishing（公式ドキュメント日本語訳）](https://rustsecjp.github.io/trusted-publishing-ja/): API トークンを置かずに CI からクレートを公開する仕組みの日本語訳。
+- [Unsafe Code Guidelines Reference（rust-lang）日本語訳](https://rustsecjp.github.io/unsafe-code-guidelines-ja/): unsafe なコードの用語集（健全性、未定義動作、有効性不変条件など）と議論の記録の日本語訳。
+- [Kani Rust Verifier 日本語訳](https://rustsecjp.github.io/kani-ja/): Rust のコードをモデル検査で確かめるツール Kani の公式ドキュメントの日本語訳。
+- [cargo-auditable と cargo-crev の文書 日本語訳](https://rustsecjp.github.io/supply-chain-tools-ja/): 実行ファイルに依存の一覧を埋め込む cargo-auditable と、レビューを共有する cargo-crev の文書の日本語訳。
+- [Safety-Critical Rust Coding Guidelines 日本語訳](https://rustsecjp.github.io/safety-critical-rust-coding-guidelines-ja/): 自動車・航空・医療など安全性が重要な分野で Rust を使うためのコーディングガイドラインの日本語訳。
 
 ## 事件の記録
 

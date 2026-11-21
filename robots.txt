@@ -12,3 +12,7 @@ Sitemap: https://rustsecjp.github.io/cargo-deny-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/rust-guidelines-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/advisory-db-ja/sitemap.xml
 Sitemap: https://rustsecjp.github.io/trusted-publishing-ja/sitemap.xml
+Sitemap: https://rustsecjp.github.io/unsafe-code-guidelines-ja/sitemap.xml
+Sitemap: https://rustsecjp.github.io/kani-ja/sitemap.xml
+Sitemap: https://rustsecjp.github.io/supply-chain-tools-ja/sitemap.xml
+Sitemap: https://rustsecjp.github.io/safety-critical-rust-coding-guidelines-ja/sitemap.xml
