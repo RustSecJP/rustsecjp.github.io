@@ -5,75 +5,31 @@ permalink: /en/
 title: RustSecJP — Japanese community for Rust security research
 description: RustSecJP is a Japanese community for Rust security research and information sharing. It publishes campaign records for malicious crates and Japanese translations of Rust security documents.
 ---
-<section class="hero">
-  <div class="in">
-    <img class="hero-art" src="/assets/logo-alpha.png?v=3" alt="" width="640" height="640">
-    <span class="rule" aria-hidden="true"></span>
-    <h1>Rust<span>Sec</span>JP</h1>
-    <p class="sub">Japanese community for Rust security research</p>
-    <p class="desc">A place to share the latest information, research and knowledge about Rust security.</p>
-    <div class="cta">
-      <a class="btn pri" href="#advisories"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l7.5 3v5.6c0 4.4-3 8-7.5 9.4-4.500-1.400-7.500-5-7.500-9.400V6z"/></svg> See the latest advisories <span class="arr">→</span></a>
-      <a class="btn" href="https://github.com/RustSecJP"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> View on GitHub</a>
-    </div>
-  </div>
+<p class="lead">We investigate Rust supply-chain incidents and vulnerabilities and record them in Japanese, and translate Rust security books and documents into Japanese.</p>
+
+<section id="research" class="sec">
+  <h2 class="sh">research</h2>
+  {% for p in site.data.posts %}
+  <article class="post">
+    <h3><a href="{{ p.url }}" lang="ja">{{ p.title }}</a></h3>
+    <p class="meta"><time datetime="{{ p.date }}">{{ p.date | date: "%Y-%b-%d" | upcase }}</time><span class="kind">{{ p.kind_en }}</span><span class="pid">{{ p.id }}</span></p>
+  </article>
+  {% endfor %}
+  <p class="more">Records are written in Japanese. <a href="/incidents/campaigns/">All campaign records</a> · <a href="https://github.com/RustSecJP/incidents/issues">Candidates</a></p>
 </section>
 
-<section class="board">
-  <div class="in">
-    <div class="grid">
+<section id="translations" class="sec">
+  <h2 class="sh">translations</h2>
+  <p class="note">Unofficial Japanese translations. The originals take precedence.</p>
+  <ul class="tl">
+    {% for t in site.data.translations %}
+    <li><a href="{{ t.url }}">{{ t.title_en }}</a><span class="org">{{ t.org_en }}</span><span class="d">{{ t.desc_en }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
 
-      <section class="card c-adv" id="advisories">
-        <div class="ch"><h2>Latest Advisories</h2><a class="more" href="/incidents/campaigns/">View all <span class="arr">→</span></a></div>
-        <div class="rows">
-          {% for a in site.data.latest %}
-          <a class="row" href="{{ a.url }}"><span class="id">{{ a.id }}</span><span class="ttl">{{ a.title_en }}</span><span class="date">{{ a.published }}</span></a>
-          {% endfor %}
-        </div>
-        <p class="foot-note"><span class="mono">RSJP-C-</span> IDs are RustSecJP campaign IDs that group RustSec advisories. <span class="mono">RUSTSEC-</span> IDs are issued by RustSec, not by RustSecJP. Records are written in Japanese.</p>
-      </section>
-
-      <section class="card c-res" id="research">
-        <div class="ch"><h2>Research</h2><a class="more" href="/incidents/">View all <span class="arr">→</span></a></div>
-        <a class="res" href="/incidents/campaigns/RSJP-C-2025-001/">
-          <span class="thumb" aria-hidden="true"></span>
-          <span>
-            <h3>Crates impersonating finch, with credential theft hidden in a dependency</h3>
-            <p>A copy of the real crate plus one line, with the stealer in a dependency. Five advisories read as one campaign.</p>
-            <time datetime="2026-11-20">2026-11-20</time>
-          </span>
-        </a>
-      </section>
-
-      <section class="card c-pro" id="projects">
-        <div class="ch"><h2>Projects</h2><a class="more" href="https://github.com/orgs/RustSecJP/repositories">View all <span class="arr">→</span></a></div>
-        <a class="pj" href="/incidents/"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l15 8.500v17L20 37 5 28.500v-17z" fill="var(--acc)"/><path d="M20 20v17L5 28.500v-17z" fill="var(--sub)"/><path d="M20 20l15-8.500v17L20 37z" fill="var(--dim)"/></svg><span><b>incidents</b><span>Campaign records for malicious crates</span></span></a>
-        <a class="pj" href="#translations"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 8h11c2 0 3 1 3 3v22c0-2-1-3-3-3H6zM34 8H23c-2 0-3 1-3 3v22c0-2 1-3 3-3h11z" fill="none" stroke="var(--sub)" stroke-width="3"/></svg><span><b>Translations</b><span>{{ site.data.translations | size }} Japanese translations</span></span></a>
-      </section>
-
-      <section class="card c-com" id="community">
-        <div class="ch"><h2>Community</h2><a class="more" href="https://github.com/RustSecJP">View all <span class="arr">→</span></a></div>
-        <ul class="ways"><li>Incident records</li><li>Translation fixes</li><li>Writing</li><li>Topic proposals</li></ul>
-        <p class="t">RustSecJP welcomes all Rust developers and researchers.</p>
-        <a class="go" href="https://github.com/RustSecJP/incidents/blob/main/CONTRIBUTING.md">Join the community <span class="arr">→</span></a>
-      </section>
-
-      <section class="card c-abt" id="about">
-        <div class="ch"><h2>About</h2></div>
-        <p class="t">RustSecJP is an unofficial community working to improve Rust security in Japan. Through research, education and information sharing, it contributes to a safer Rust ecosystem.</p>
-        <a class="go" href="https://github.com/RustSecJP">Learn more <span class="arr">→</span></a>
-      </section>
-
-      <section class="card c-trn" id="translations">
-        <div class="ch"><h2>Translations</h2><a class="more" href="https://github.com/orgs/RustSecJP/repositories">Repositories <span class="arr">→</span></a></div>
-        <p class="t">Unofficial Japanese translations of Rust security books and documents. The originals take precedence.</p>
-        <div class="trn">
-          {% for t in site.data.translations %}
-          <a class="tr" href="{{ t.url }}"><span class="org">{{ t.org_en }}</span><b>{{ t.title_en }}</b><span class="d">{{ t.desc_en }}</span></a>
-          {% endfor %}
-        </div>
-      </section>
-
-    </div>
-  </div>
+<section id="about" class="sec">
+  <h2 class="sh">about</h2>
+  <p>RustSecJP is an unofficial community working on Rust security in Japan. Contributions are welcome: incident records, translation fixes, articles, and topic suggestions.</p>
+  <p class="more"><a href="https://github.com/RustSecJP">GitHub</a> · <a href="https://github.com/RustSecJP/incidents/blob/main/CONTRIBUTING.md">Contributing</a></p>
 </section>

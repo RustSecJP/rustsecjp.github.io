@@ -41,48 +41,34 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/assets/home.css?v={{ site.time | date: '%s' }}">
 </head>
 <body>
 <a class="skip" href="#main">{% if en %}Skip to content{% else %}本文へ移動{% endif %}</a>
 <header class="hd">
-  <div class="hd-in">
-    <a class="logo" href="{% if en %}/en/{% else %}/{% endif %}"><span class="logo-mark" aria-hidden="true"></span>RustSecJP</a>
-    <nav class="hd-nav" aria-label="Main">
-      <a href="#advisories">Advisories</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#community">Community</a>
-      <a href="#about">About</a>
-    </nav>
-    <div class="hd-tools">
-      {% if en %}<a class="hd-lang" href="/" lang="ja">日本語</a>{% else %}<a class="hd-lang" href="/en/" lang="en">English</a>{% endif %}
-      <a class="hd-ic" href="https://github.com/RustSecJP" aria-label="GitHub"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
-      <button class="hd-ic" id="theme" type="button" aria-label="{% if en %}Toggle light and dark{% else %}明るい配色と暗い配色を切り替える{% endif %}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
-    </div>
-  </div>
+  <a class="mark" href="{% if en %}/en/{% else %}/{% endif %}"><img src="/assets/logo-alpha.png?v=3" alt="" width="56" height="56"><span>RustSecJP</span></a>
+  <nav class="menu" aria-label="Main">
+    <span class="prompt" aria-hidden="true">&gt;</span>
+    <a href="#research">research</a>
+    <a href="/incidents/advisories/">advisories</a>
+    <a href="#translations">translations</a>
+    <a href="#about">about</a>
+    <span class="line" aria-hidden="true"></span>
+    {% if en %}<a class="lang" href="/" lang="ja">日本語</a>{% else %}<a class="lang" href="/en/" lang="en">en</a>{% endif %}
+    <a class="ic" href="https://github.com/RustSecJP" aria-label="GitHub"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <button class="ic" id="theme" type="button" aria-label="{% if en %}Toggle light and dark{% else %}明るい配色と暗い配色を切り替える{% endif %}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+  </nav>
 </header>
 <main id="main">
 {{ content }}
 </main>
 <footer class="ft">
-  <div class="ft-in">
-    <div class="ft-row">
-      <a class="logo ft-logo" href="/"><span class="logo-mark mono" aria-hidden="true"></span>RustSecJP</a>
-      <nav class="ft-nav" aria-label="Footer">
-        <a href="https://github.com/RustSecJP">GitHub</a>
-        <a href="/incidents/">incidents</a>
-        <a href="https://github.com/RustSecJP/incidents/issues">Issues</a>
-      </nav>
-      <p class="ft-tag">Better Security. Stronger Rust.</p>
-    </div>
-    {% if en %}
-    <p class="ft-note">RustSecJP is an <b>unofficial</b> community. It is not affiliated with RustSec, the Rust Project, or the Rust Foundation, and does not issue RUSTSEC advisory IDs. The logo is based on the Rust logo (Rust Foundation, CC BY 4.0). Rust and the Rust logo are trademarks of the Rust Foundation.</p>
-    {% else %}
-    <p class="ft-note">RustSecJP は<b>非公式</b>のコミュニティです。RustSec・Rust Project・Rust Foundation とは提携しておらず、RUSTSEC の助言 ID は発行しません。ロゴは Rust のロゴ（Rust Foundation、CC BY 4.0）をもとにしています。Rust と Rust のロゴは Rust Foundation の商標です。</p>
-    {% endif %}
-  </div>
+  {% if en %}
+  <p>RustSecJP is an <b>unofficial</b> community. It is not affiliated with RustSec, the Rust Project, or the Rust Foundation, and does not issue RUSTSEC IDs. The logo is based on the Rust logo (Rust Foundation, CC BY 4.0). Rust and the Rust logo are trademarks of the Rust Foundation.</p>
+  {% else %}
+  <p>RustSecJP は<b>非公式</b>のコミュニティです。RustSec・Rust Project・Rust Foundation とは提携しておらず、RUSTSEC の助言 ID は発行しません。ロゴは Rust のロゴ（Rust Foundation、CC BY 4.0）をもとにしています。Rust と Rust のロゴは Rust Foundation の商標です。</p>
+  {% endif %}
 </footer>
 <script>document.getElementById("theme").addEventListener("click",function(){window.rsjpToggleTheme()});</script>
 </body>
